@@ -1,7 +1,9 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
-#include <algorithm>>
+#include <algorithm>
+#include <numeric>
+#include <conio.h>
 
 using namespace std;
 
@@ -17,7 +19,7 @@ int main(){
     if ( N==1 ){
         cout << "500" << endl;
         out << "500" << endl;
-        return;
+        return 0;
     }
 
     if ( N==2 ){
@@ -29,7 +31,7 @@ int main(){
             cout << "1500" << endl;
             out << "1500" << endl;
         }
-        return 0
+        return 0;
     }
 
     int b[N];
@@ -47,6 +49,21 @@ int main(){
         if ( r[i]>r[i+1] )
             b[i] = b[i+1]+1;
     }
-    
 
+    cout << "R: ";
+    for( int i=0; i<N; ++i )
+        cout << r[i] << " ";
+    cout << endl;
+
+    cout << "b: ";
+    for( int i=0; i<N; ++i )
+        cout << b[i] << " ";
+    cout << endl;
+
+    int bsum = 0;
+    for( auto& x : b )
+        bsum+=x;
+    cout << "answer: " << 500 * (N+bsum);
+    
+    getch();
 }
