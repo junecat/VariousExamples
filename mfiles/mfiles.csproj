@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="cat.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Controllers\files\girl.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="files\cat.jpg" />
+    <Content Include="files\girl.jpg" />
+  </ItemGroup>
+
+</Project>
